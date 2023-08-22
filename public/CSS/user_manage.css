@@ -1,0 +1,88 @@
+@charset "UTF-8";
+
+.user_manage {
+    margin: 0 auto;
+}
+
+.user_manage ul{
+    margin: 0 auto;
+    display: flex;
+    list-style: none;
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px #b4b4b4 double;
+}
+.user_manage li{
+    display: inline-block;
+    text-overflow: break-words;
+}
+
+.id {
+    width: 100%;
+    max-width: 20px;
+}
+.name {
+    width: 100%;
+    max-width: 230px;
+}
+.uid {
+    width: 100%;
+    max-width: 200px;
+}
+.kana {
+    width: 100%;
+    max-width: 230px;
+}
+.email {
+    width: 100%;
+    max-width: 230px;
+}
+.role {
+    width: 100%;
+    max-width: 80px;
+}
+.role input{
+    width: 100%;
+    max-width: 50px;
+}
+.manage {
+    width: 100%;
+    max-width: 50px;
+    margin-left: 5px;
+}
+.del {
+    width: 100%;
+    max-width: 80px;
+    margin-left: 5px;
+}
+.del input{
+    width: 100%;
+    max-width: 50px;
+    margin-left: 5px;
+}
+.button {
+    width: 100%;
+    max-width: 50px;
+    margin-left: 5px;
+}
+
+.members:nth-child(odd){
+    background-color: aliceblue;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    list-style: none;
+}
+.pagination a{
+    color:black;
+    padding: 0 10px;
+}
+.pagination span{
+    color:black;
+    padding: 0 10px;
+}

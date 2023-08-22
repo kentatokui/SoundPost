@@ -1,0 +1,100 @@
+@charset "UTF-8";
+
+/*-------------------------------------------------------------------------------*/
+body {
+    margin: 0;
+    background-color: #28262C;
+}
+
+/* カテゴリメニュー ---------------------------------------------------------------*/
+.category {
+    height: 50px;
+    background-color: #E6F14A;
+    position: relative;
+    width: 100%;
+}
+.category_menu {
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.category_menu td{
+    max-width: 180px;
+    width: auto;
+}
+.category_menu button {
+    text-align: center;
+    background-color: #ffffff00;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    border: none;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #28262C;
+}
+.media_category {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .category {
+        display: none;
+    }
+
+    .media_category {
+        display: block;
+    }
+    .media_category {
+        height: 50px;
+        background-color: #E6F14A;
+        position: relative;
+        width: 100%;
+    }
+    .media_category_menu {
+        margin: 0 auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+    .media_category_menu td{
+        max-width: 180px;
+        width: auto;
+    }
+    .media_category_menu td a{
+        text-decoration: none;
+        color: #28262C;
+        padding: 0px 15px 0px 5px;
+    }
+    .media_category_menu input {
+        text-align: center;
+        background-color: #ffffff00;
+        font-family: 'Anton',"Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+        border: none;
+        font-size: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+
+
+
+
+

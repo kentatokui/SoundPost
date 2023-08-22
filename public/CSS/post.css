@@ -1,0 +1,263 @@
+@charset "UTF-8";
+
+.main_detail {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(78, 78, 78, 0.178);
+    margin: 20px auto;
+    padding: 2%;
+    color: azure;
+    width: 100%;
+    max-width: 1050px;
+}
+.detail span{
+    font-size: 13px;
+}
+.image img{
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    object-fit: cover;
+    padding-top: 10px;
+}
+.custom h2 {
+    margin-bottom: 0;
+    color: #E6F14A;
+    letter-spacing: 10px;
+}
+.custom p {
+    margin-top: 8px;
+}
+.detail {
+    width: 100%;
+    max-width: 450px;
+}
+.detail ul{
+    display: flex;
+    list-style-type: none;
+    margin: 5px 0px 1px 5px;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 405px;
+    border-bottom: 2px solid azure;
+}
+.title{
+    min-width: 150px;
+}
+.content {
+    width: 100%;
+    max-width: 250px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+.material_title {
+    padding-left: 100px;
+    margin: 6px 0px;
+    text-align: left;
+    letter-spacing: 10px;
+    color: #E6F14A;
+}
+.custom p {
+    width: 100%;
+    max-width: 600px;
+    display: inline-block;
+    word-wrap: break-word;
+}
+.bookmark {
+    width: 150px;
+    color: #28262C;
+    background-color: #E6F14A;
+    height: 30px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    border: none;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+.bookmark_b {
+    width: 150px;
+    color: #28262C;
+    background-color: #E6F14A;
+    height: 30px;
+    font-size: 18px;
+    letter-spacing: 6px;
+    border: none;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+#bookmark:hover {
+    background-color: #214955;
+}
+.im {
+    position: relative;
+}
+.button {
+    margin-bottom: 20px;
+}
+.button_b {
+    margin-bottom: 20px;
+}
+
+.c_button {
+    width: 150px;
+    color: #28262C;
+    background-color: #81C3D7;
+    height: 30px;
+    font-size: 18px;
+    letter-spacing: 8px;
+    border: none;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+.c_button:hover {
+    background-color: #214955;
+}
+.comment_inp {
+    background-color:  rgba(78, 78, 78, 0.178);
+    width: 100%;
+    max-width: 1125px;
+    margin: 20px auto;
+}
+.comment_inp textarea {
+    margin: 20px;
+    padding: 0;
+    background-color: white;
+    border: none;
+    color: #28262C;
+    font-size: 18px;
+    font-weight: bold;
+    resize: none;
+    width:90%;
+    height:200px;
+    vertical-align: bottom;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+.button{
+    width: 100%;
+    max-width: 50px;
+    background-color: #81C3D7;
+    border: none;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.button:hover{
+    background-color: #214955;
+}
+.button_b {
+    width: 100%;
+    max-width: 50px;
+    background-color: #E6F14A;
+    border: none;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.button_b:hover{
+    background-color: #214955;
+}
+.liked {
+    background-color: #81C3D7;
+}
+.liked_b {
+    background-color: #E6F14A;
+}
+
+
+.comment_hide {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width: 1300px) {
+    .main_detail {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 600px;
+    }
+    .detail {
+        width: 100%;
+        max-width: 600px;
+    }
+    .detail ul{
+        display: flex;
+        list-style-type: none;
+        margin: 5px 0px 1px 5px;
+        padding-left: 10px;
+        width: 97%;
+        max-width: 580px;
+        border-bottom: 2px solid azure;
+    }
+    .title{
+        min-width: 150px;
+    }
+    .content {
+        width: 100%;
+        max-width: 400px;
+        display: inline-block;
+        word-wrap: break-word;
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    .main_detail {
+        display: block;
+        margin: auto;
+        width: 100%;
+        max-width: 340px;
+    }
+    .detail {
+        width: 100%;
+        max-width: 340px;
+    }
+    .detail ul{
+        display: flex;
+        list-style-type: none;
+        margin: 5px 0px 1px 5px;
+        padding-left: 10px;
+        width: 95%;
+        max-width: 340px;
+        border-bottom: 2px solid azure;
+    }
+    .title{
+        min-width: 150px;
+    }
+    .content {
+        width: 100%;
+        max-width: 280px;
+        display: inline-block;
+        word-wrap: break-word;
+    }
+    
+}

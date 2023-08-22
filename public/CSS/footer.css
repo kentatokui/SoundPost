@@ -1,0 +1,17 @@
+.skewed_footer {
+
+    background: #81C3D7;
+
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30px;
+}
+.skewed_footer p{
+    text-align: center;
+    margin: 0;
+}
+.footer {
+    margin-top: 100px;
+}

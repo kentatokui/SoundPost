@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+.create {
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+}
+.create form {
+    width: 100%;
+}
+.create span {
+    font-size: 12px;
+}
+.create .title {
+    margin: 0 20px;
+    color: #81c3d7a1;
+    font-size: 16px;
+    letter-spacing: 5px;
+}
+.create h2 {
+    width: 100%;
+    text-align: center;
+}
+.create ul{
+    list-style: none;
+    width: 100%;
+    padding: 0;
+}
+.create input {
+    margin: 0 20px;
+    padding: 0;
+    background-color: rgba(78, 78, 78, 0.404);
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 90%;
+    height: 40px;
+}
+.create select{
+    margin: 0 20px;
+    padding: 0;
+    background-color: rgba(78, 78, 78, 0.404);
+    border: none;
+    color: white;
+    font-size: 20px;
+    width: 90%;
+    height: 40px;
+}
+.create textarea {
+    margin: 0 20px;
+    padding: 0;
+    background-color: rgba(78, 78, 78, 0.404);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    resize: none;
+    width:90%;
+    height:200px;
+}

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+.grid_layout {
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    width: auto;
+    max-width: 1600px;
+    margin: 0 auto;
+    gap: 1%;
+}
+
+.post_image {
+    background-color: aquamarine;
+    width: 100%;
+    max-width: 400px;
+}
+
+.post_image img{
+    width: 100%;
+    max-width: 400px;
+}
+
+table {
+    width: auto;
+    overflow-wrap: break-word;
+}
+th {
+    width: auto;
+    overflow-wrap: break-word;
+}
+
+td {
+    width: auto;
+    overflow-wrap: break-word;
+}
+
+tr {
+    width: auto;
+    overflow-wrap: break-word;
+}

@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+.login_form {
+    background-color:  rgba(78, 78, 78, 0.178);
+    display: flex;
+    flex-flow: column;
+    text-align: center;
+}
+
+.login_form input {
+    background-color: white;
+    border: 0.5px solid #28262C;
+    width: 100%;
+    max-width: 450px;
+    height:100%;
+    max-height: 50px;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-weight: bold;
+}
+
+.login input{
+    background-color: #81C3D7;
+    border: 0.5px solid #28262C;
+    width: 100%;
+    max-width: 450px;
+    height:100%;
+    max-height: 50px;
+    font-size: 24px;
+    margin: 15px 0px;
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-weight: bold;
+}
+
+.login_form a {
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-weight: bold;
+    color: rgb(230, 230, 230);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.login_form p {
+    /* text-align: left; */
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+.login {
+    margin: 20px 0;
+}
+.login button{
+    background-color: #81C3D7;
+    border: 0.5px solid #28262C;
+    width: 100%;
+    max-width: 450px;
+    height:100%;
+    max-height: 50px;
+    font-size: 24px;
+    margin: 15px 0px;
+    font-family: "Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px) {
+    .login_form {
+        background-color:  rgba(78, 78, 78, 0.178);
+        display: flex;
+        flex-flow: column;
+        text-align: center;
+    }
+    
+    .login_form input {
+        background-color: white;
+        border: 0.5px solid #28262C;
+        width: 100%;
+        max-width: 250px;
+        height:100%;
+        max-height: 50px;
+        font-size: 24px;
+        margin-bottom: 15px;
+        font-family: 'Anton',"Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+        font-weight: bold;
+    }
+    
+    .login input{
+        background-color: #81C3D7;
+        border: 0.5px solid #28262C;
+        width: 100%;
+        max-width: 250px;
+        height:100%;
+        max-height: 50px;
+        font-size: 24px;
+        margin: 15px 0px;
+        font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+        font-weight: bold;
+    }
+    
+    .login_form a {
+        font-family: "Helvetica Neue",
+        Arial,
+        "Hiragino Kaku Gothic ProN",
+        "Hiragino Sans",
+        Meiryo,
+        sans-serif;
+        font-weight: bold;
+        color: rgb(230, 230, 230);
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+}

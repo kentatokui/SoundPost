@@ -1,0 +1,237 @@
+@charset "UTF-8";
+
+/*フェード表示させる要素に使用するためのクラス*/
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
+}
+/*ハンバーガーメニュー*/
+#navi {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    bottom: 0;
+    width: 300px;
+    color: #fff;
+    padding: 60px 25px;
+    background-color: #28262C;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all .5s;
+    z-index: 20;
+    opacity: 0;
+}
+#navi a {
+    color: #81C3D7;
+}
+#navi ul {
+    list-style: none;
+}
+.open #navi {
+    right: 0;
+    opacity: 1;
+}
+#navi ul {
+    margin: 0;
+    padding: 0;
+}
+#navi ul.nav-menu {
+    margin-bottom: 60px;
+    border-top: solid 1px #fff;
+}
+#navi ul.nav-menu li {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    border-bottom: solid 1px #fff;
+    color: white;
+    
+}
+#navi li {
+    color: #81C3D7;
+    font-size: 26px;
+}
+.toggle_btn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    transition: all .5s;
+    cursor: pointer;
+    z-index: 999;
+}
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    left: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #81C3D7;
+    border-radius: 4px;
+    transition: all .5s;
+}
+.toggle_btn span:nth-child(1) {
+    top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+    top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+    bottom: 4px;
+}
+
+/*-------------------------------------------------------------------------------*/
+html {
+    min-height: 100%;
+    margin: 0;
+}
+#html {
+    position: relative;
+    min-height: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+    background-color: #28262C;
+    height: 100%;
+    overflow: auto;
+}
+section {
+    margin-bottom: 38px;
+}
+
+.skewed {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(125deg, #b4b4b4, #ffffff);
+    z-index: -10;
+    transform: skewY(9deg);
+    transform-origin: top right;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img {
+    margin-top: 20px;
+    margin-left: 30%;
+    width: 100%;
+    min-width: 200px;
+}
+/* .logo {
+    max-width: 180px;
+    width: 100%;
+} */
+
+/* メインメニュー ---------------------------------------------*/
+.menu {
+    display: flex;
+    text-align: right;
+    margin-top: 60px;
+    margin-right: 3%;
+}
+.main_menu {
+    padding-left: 0px;
+    display: flex;
+    justify-content: flex-end;
+    list-style:none;
+}
+.main_menu li{
+    text-decoration: none;
+    font-size: 24px;
+    padding-right: 55px
+}
+
+.main_menu li a{
+    color: #28262C;
+    text-decoration: none;
+}
+
+.main_menu li a:hover{
+    color: #E6F14A;
+    text-decoration: none;
+}
+/*ログインボタン-----------------------------*/
+.login_button {
+    min-width: 150px;
+    height: 80%;
+    background-color: #81C3D7;
+    border: 0.5px solid #28262C;
+    font-family: 'Anton',"Helvetica Neue",
+    Arial,
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    Meiryo,
+    sans-serif;
+}
+.login_button:hover{
+    background-color: #E6F14A;
+}
+.login_button a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #28262C;
+}
+/*ログアウトボタン-----------------------------*/
+.logout_button {
+    min-width: 150px;
+    height: 80%;
+    background-color: #E6F14A;
+    border: 0.5px solid #28262C;
+}
+.logout_button:hover{
+    background-color: #81C3D7;
+}
+.logout_button a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #28262C;
+}
+
+.media {
+    display: none;
+}
+.hide   {
+    display: none;
+}
+.post_button a{
+    color: white;
+}
+
+@media screen and (max-width: 800px) {
+    .menu {
+        display: none;
+    }
+    .media {
+        display: flex;
+        margin-right: 4%;
+        justify-content: right;
+    }
+    .header {
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo img {
+        margin-top: 5px;
+        margin-left: 5%;
+        width: 80%;
+        min-width: 100px;
+    }
+    .media_main_menu {
+        display: none;
+    }
+}
