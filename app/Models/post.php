@@ -33,6 +33,7 @@ class post extends Model
             ->join('blands','blands.id','=','posts.bland_id')
             ->join('types','types.id','=','posts.type_id')
             ->WHERE('type_id','=',$category_id)
+            ->orderBy('posts.id','desc')
             ->paginate(8);
             return $posts;
         }else if(isset($_POST['bland_category'])){
@@ -44,6 +45,7 @@ class post extends Model
             ->join('blands','blands.id','=','posts.bland_id')
             ->join('types','types.id','=','posts.type_id')
             ->WHERE('bland_id','=',$bland_category_id)
+            ->orderBy('posts.id','desc')
             ->paginate(8);
             return $posts;
         }
@@ -53,6 +55,7 @@ class post extends Model
             'finish','custom')
             ->join('members','members.id','=','posts.user_id')
             ->join('blands','blands.id','=','posts.bland_id')
+            ->orderBy('posts.id','desc')
             ->paginate(8);
             return $posts;
             

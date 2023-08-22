@@ -130,7 +130,9 @@
     <div class="comment_inp comment_hide" id = "com">
     <form action="{{ route('home.comment_post') }}" method="post">
         @csrf
+        @if(isset($_SESSION['id']))
         <input type="hidden" name="m_id" value="{{ $_SESSION['id'] }}">
+        @endif
         <input type="hidden" name="postId" value="{{ $value->p_id }}">
         <textarea name="comment" class ="post" placeholder="comment"></textarea>
         <input type="submit" class = "button" value="投稿">
