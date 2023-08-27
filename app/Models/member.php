@@ -43,8 +43,8 @@ class member extends Model
                 }
         //ユーザーID
         $_SESSION['result_uid'] = "";
-            if(empty($_POST["uid"]) || mb_strlen($_POST['uid']) >= 10){
-                $_SESSION['result_uid'] = "ユーザーIDは10文字以内で必ずご入力ください。";
+            if(empty($_POST["uid"]) || mb_strlen($_POST['uid']) >= 10 || !preg_match("/^[a-zA-Z0-9]+$/",$_POST["uid"])){
+                $_SESSION['result_uid'] = "ユーザーIDは半角英数字10文字以内で必ずご入力ください。";
             }
         $_SESSION['uid_ret'] = "";
             if(!empty($_POST["uid"])){
@@ -81,7 +81,10 @@ class member extends Model
         }else{
             $_SESSION['result_pass_conf'] = "確認用パスワードが異なっています";
         }
-        
+        $uid_err = member::WHERE('uid','=','@'.$_POST['uid'])->get();
+        if(!empty($uid_err['0']['uid'])){
+            $_SESSION['result_uid'] = "ユーザーIDが重複しています。他のユーザーIDをご使用ください。";
+        }
 
         if(!empty($_SESSION['result_name']) || 
                 !empty($_SESSION['result_uid']) ||
@@ -156,22 +159,22 @@ class member extends Model
 
     public function change_pass(){
         $email = request()->get('email');
-        $pass = request()->get('pass');
+        $uid = request()->get('uid');
         $new_pass = request()->get('new_pass');
         $new_pass_conf = request()->get('new_pass_conf');
 
-        if(!isset($email) && !isset($pass) &&!isset($new_pass) && !isset($new_pass_conf)){
+        if(!isset($email) && !isset($uid) &&!isset($new_pass) && !isset($new_pass_conf)){
             $_SESSION['email_err'] = "※メールアドレスを入力してください。";
-            $_SESSION['pass_err'] = "※パスワードを入力してください。";
+            $_SESSION['uid_err'] = "※@から始まるユーザーIDを入力してください。";
             $_SESSION['new_pass_err'] = "※新規パスワードを入力してください。";
             $_SESSION['pass_conf_err'] = "確認用パスワードが一致しません。";
             return redirect()->to('change_pw')->send();
         }else if(!isset($email)){
             $_SESSION['email_err'] = "※メールアドレスを入力してください。";
             return redirect()->to('change_pw')->send();
-        }else if(!isset($pass)){
+        }else if(!isset($uid)){
             $_SESSION['input_email'] = $email;
-            $_SESSION['pass_err'] = "※パスワードを入力してください。";
+            $_SESSION['uid_err'] = "※@から始まるユーザーIDを入力してください。";
             return redirect()->to('change_pw')->send();
         }else if(!isset($new_pass)){
             $_SESSION['input_email'] = $email;
@@ -186,8 +189,8 @@ class member extends Model
         }
         
         if($member != NULL){
-            $hash_pass = $member['password'];
-            if (password_verify($pass,$hash_pass)) {
+            $conf_uid = $member['uid'];
+            if ($email == $member['email'] && $uid == $conf_uid) {
                 if($new_pass != $new_pass_conf){
                     $_SESSION['pass_conf_err'] = "確認用パスワードが一致しません。";
                     return redirect()->to('change_pw')->send();
@@ -197,16 +200,16 @@ class member extends Model
                     return redirect()->to('login')->send();
                 }
                 return ;
-            }else if (!password_verify($pass,$hash_pass)) {
+            }else if ($email != $member['email'] || $uid != $conf_uid) {
                 $_SESSION['input_email'] = $email;
-                $_SESSION['pass_err'] = '※パスワードが間違っています。';
+                $_SESSION['email_err'] = 'メールアドレスとユーザーIDが一致しません。';
                 return redirect()->to('change_pw')->send();
             return ;
             }
         }else {
             $_SESSION['input_email'] = $email;
-            $_SESSION['e_p_err'] = '※メールアドレスもしくはパスワードが間違っています。';
-            return redirect()->to('login')->send();
+            $_SESSION['e_p_err'] = '※メールアドレスもしくはユーザーIDが間違っています。';
+            return redirect()->to('change_pw')->send();
         }
     }
 

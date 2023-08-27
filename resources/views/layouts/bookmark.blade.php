@@ -11,8 +11,7 @@
             <form action="{{ route('home.post') }}" method = "post">
             @csrf
 
-            <p>試験確認用ID：</p>
-            <input type="text" name="postId" value="{{ $post->p_id }}">
+            <input type="hidden" name="postId" value="{{ $post->p_id }}">
 
             <div class = "image ">
                 <img src="../images/post/{{ $post->photo }}" alt="写真">

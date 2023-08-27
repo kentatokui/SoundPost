@@ -25,11 +25,11 @@
                 @endif
             </div>
             <div>
-                <p>現在のパスワード</p>
-                @if(isset($_SESSION['pass_err']))
-                <p>{{ $_SESSION['pass_err'] }}</p>
+                <p>ユーザーID</p>
+                @if(isset($_SESSION['uid_err']))
+                <p>{{ $_SESSION['uid_err'] }}</p>
                 @endif
-                <input type="password" name = "pass" placeholder="password" autocomplete=”off”>
+                <input type="text" name = "uid" placeholder="userId @xxxxxx" autocomplete=”off”>
             </div>
             <div>
                 <p>新規パスワード</p>
